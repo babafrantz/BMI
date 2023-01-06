@@ -1,0 +1,139 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" >
+<html lang="en">
+<head>
+    <style>
+   h1   {text-align: center; color: green;}
+   h3  {text-align: center; color: green;}
+   h5  {text-align: center; color: green;}
+   h6  {text-align: center; color: black;}
+   a:link {color: green;}
+ </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> BMI </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+<form th:action = "@{/first_bmiController}" id = "action" method = "post">
+<hr>
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" th:href="@{/first_bmiController}"> <h3><b> BMI Home </b></h3></a>
+    </li>
+    <li class="nav-item">
+
+        <a class="nav-link" th:href="@{/male}"> <h3><b> Male </b></h3></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" th:href="@{/female}"> <h3><b> Female </b></h3></a>
+
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" th:href="@{/children}"> <h3><b> Children </b></h3></a>
+    </li>
+</ul>
+
+<hr>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div class="container">
+                <h5> <b> What is BMI </b> </h5>
+            </div>
+
+            <div class="container">
+                <h6> Body mass index, or BMI, gives an indication of your body size.
+
+                    BMI is calculated using your weight and height (your weight divided by your height squared). Along with several other factors, like your blood pressure and cholesterol, BMI can help estimate your risk of a heart attack or stroke.
+
+                   </h6>
+            </div>
+            <div class="container">
+                <h6>
+
+                    It’s important to remember that BMI is not the most reliable measure of whether your weight is in a healthy range for your height. It’s not a good overall indicator of how healthy you are, and doesn’t take into account important factors like age, gender and body composition (fat, muscle and bone).
+
+                    For the following groups of people, BMI is not an accurate measure:</h6>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container">
+                <h5> <b> Importance of BMI </b> </h5>
+            </div>
+
+            <div class="container">
+                <h6>
+                    BMI is an estimate of body fat and a good gauge of your risk for diseases that can occur with more body fat. The higher your BMI, the higher your risk for certain diseases such as heart disease, high blood pressure, type 2 diabetes, gallstones, breathing problems, and certain cancers.
+
+                </h6>
+            </div>
+            <div class="container">
+                <h6>
+                    What is the importance of BMI and BMR?
+                    This includes the number on the scales but also things like your Basal Metabolic Rate (BMR) and Body Mass Index (BMI). You're BMR and BMI will help you understand the energy you burn, the most appropriate weight loss goal and the number of calories you need to consume to lose weight.
+
+                   :</h6>
+            </div>
+
+
+
+        </div>
+        <div class="col">
+            <div class="container">
+                <h5> <b> How to Calculate BMI </b> </h5>
+            </div>
+
+            <div class="container">
+                <h6>
+                    Body Mass Index is a simple calculation using a person's height and weight. The formula is BMI = kg/m2 where kg is a person's weight in kilograms and m2 is their height in metres squared. A BMI of 25.0 or more is overweight, while the healthy range is 18.5 to 24.9.
+
+                </h6>
+            </div>
+            <div class="container">
+                <h6>
+                    To calculate your BMI, divide your weight in kilograms by the square of your height in metres. Using a BMI calculator makes this easy.
+
+                    :</h6>
+            </div>
+
+
+
+        </div>
+        <div class="container-fluid">
+
+            <hr>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/first_bmiController}"> <h3><b> BMI Home </b></h3></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/male}"> <h3><b> Male </b></h3></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/female}"> <h3><b> Female </b></h3></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/children}"> <h3><b> Children </b></h3></a>
+                </li>
+            </ul>
+            <hr>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        @Copyright Yusuf Oluwasola Omoloja &nbsp;&nbsp;&nbsp;
+        <h6>Time: <span th:text="${times}"></span></h6>
+        <h6>Date: <span th:text="${dates}"></span></h6>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</form>
+</body>
+</html>
